@@ -18,24 +18,24 @@ export const receivePerson = json => ({
     person: json
 })
 
-export function fetchPerson(subreddit) {
+export function fetchPerson(personName) {
     // Thunk middleware knows how to handle functions.
     // It passes the dispatch method as an argument to the function,
     // thus making it able to dispatch actions itself.
-  
+    console.log(personName)
     return function(dispatch) {
       // First dispatch: the app state is updated to inform
       // that the API call is starting.
   
-      dispatch(searchForPerson(subreddit))
+      dispatch(searchForPerson(personName))
         console.log("Done searching for person")
       // The function called by the thunk middleware can return a value,
       // that is passed on as the return value of the dispatch method.
   
       // In this case, we return a promise to wait for.
       // This is not required by thunk middleware, but it is convenient for us.
-      console.log("fetching for person")
-      return fetch("/games/1942?fields=*", {
+      console.log("fetching for person: " + personName)
+      return fetch("/games?fields=*&search="+personName, {
         mode: "no-cors",
        
         headers: {

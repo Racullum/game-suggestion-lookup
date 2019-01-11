@@ -1,6 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { searchForPerson } from '../actions';
+import { fetchPerson, receivePerson } from '../actions';
+
+
 
 //Destructring dispatch method from the redux store we get access from connect
 const PersonSearchBar = ({ dispatch }) => {
@@ -15,7 +17,8 @@ const PersonSearchBar = ({ dispatch }) => {
                     if (!input.value.trim()) {
                         return
                     }
-                    dispatch(searchForPerson(input.value))
+                    dispatch(fetchPerson(input.value))
+                   
                     input.value = ''
                 }}
                 >
