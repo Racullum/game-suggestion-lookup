@@ -1,23 +1,31 @@
 import {
     SEARCH_FOR_PERSON,
-    RECEIVE_PERSON
+    RECEIVE_PERSON,
+    UPDATE_INPUT_VALUE
 } from '../actions'
 
-const person = (state = {personName: '', url: '', bio: ''}, action) => {
+const initialState = {
+    suggestions: [],
+    isFetching: false,
+    inputValue: ''
+}
+
+const person = (state = initialState, action) => {
 
     switch (action.type) {
         case SEARCH_FOR_PERSON: 
             return Object.assign({}, state, {
                     isFetching: true
-                }
-            )
+            })
+        case UPDATE_INPUT_VALUE:
+            return Object.assign({}, state, {
+                inputValue: action.inputValue
+            })
         case RECEIVE_PERSON:
                 console.log(action)
             return Object.assign({}, state, {
                 isFetching: false,
-                personName: action.person.name,
-                url: action.person.url,
-                bio: action.person.slug 
+                suggestions: action.person
                 })
 
         default:

@@ -5,18 +5,32 @@ import fetch from 'cross-fetch'
 console.log("Calling searchForPerson reducers")
 
 export const SEARCH_FOR_PERSON = 'SEARCH_FOR_PERSON'
-
 export const searchForPerson = text => ({
     type: SEARCH_FOR_PERSON,
     text
 })
 
 export const RECEIVE_PERSON = 'RECEIVE_PERSON'
-
 export const receivePerson = json => ({
     type: RECEIVE_PERSON,
     person: json
 })
+
+export const UPDATE_INPUT_VALUE = 'UPDATE_INPUT_VALUE'
+export const updateInputValue = value => {
+  return {
+    type: UPDATE_INPUT_VALUE,
+    inputValue: value
+  }
+}
+
+export const CLEAR_SUGGESTIONS = 'CLEAR_SUGGESTIONS'
+export const clearSuggestions = () => {
+  return {
+    type: CLEAR_SUGGESTIONS,
+    suggestions: []
+  }
+}
 
 export function fetchPerson(personName) {
     // Thunk middleware knows how to handle functions.
@@ -54,7 +68,7 @@ export function fetchPerson(personName) {
           // We can dispatch many times!
           // Here, we update the app state with the results of the API call.
             
-          dispatch(receivePerson(json[0]))
+          dispatch(receivePerson(json))
           
         )
        
