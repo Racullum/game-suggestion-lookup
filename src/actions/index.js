@@ -17,7 +17,7 @@ export const receivePerson = json => ({
 })
 
 export const UPDATE_INPUT_VALUE = 'UPDATE_INPUT_VALUE'
-export const updateInputValue = value => {
+export const updateInputValue = (value) => {
   return {
     type: UPDATE_INPUT_VALUE,
     inputValue: value
@@ -31,6 +31,36 @@ export const clearSuggestions = () => {
     suggestions: []
   }
 }
+
+function generateImageUrl(coverId) {
+  console.log("Calling generate image" + coverId.cover);
+
+      return fetch("/covers", {
+        mode: "no-cors",
+        method: 'post',
+        body: ('fields *; where id=' + coverId.cover +';'),
+        headers: {
+          "user-key": "a1d21661c77bb5ba89f0797f186f968e",
+        }
+    })
+    .then(
+      response => response.json(),
+      // Do not use catch, because that will also catch
+      // any errors in the dispatch and resulting render,
+      // causing a loop of 'Unexpected batch number' errors.
+      // https://github.com/facebook/react/issues/6895
+      error => console.log('An error occurred.', error)
+    )
+    .then(json => {
+
+      const coverImageJson = {coverImage: json[0].url};
+      console.log(json);
+      const jsonBody = {...coverId, ...{coverImage: json[0].url}};
+      console.log(jsonBody.coverImage);
+      return jsonBody;
+    })
+  }
+
 
 export function fetchPerson(personName) {
     // Thunk middleware knows how to handle functions.
@@ -49,9 +79,10 @@ export function fetchPerson(personName) {
       // In this case, we return a promise to wait for.
       // This is not required by thunk middleware, but it is convenient for us.
       console.log("fetching for person: " + personName)
-      return fetch("/games?fields=*&search="+personName, {
+      return fetch("/games", {
         mode: "no-cors",
-       
+        method: 'post',
+        body: ('fields *; where name ~"'+personName+'";'),
         headers: {
           "user-key": "a1d21661c77bb5ba89f0797f186f968e",
         }
@@ -64,13 +95,17 @@ export function fetchPerson(personName) {
           // https://github.com/facebook/react/issues/6895
           error => console.log('An error occurred.', error)
         )
-        .then(json =>
+        .then(json => {
           // We can dispatch many times!
           // Here, we update the app state with the results of the API call.
-            
-          dispatch(receivePerson(json))
           
+          generateImageUrl(json[0])
+          .then(json => {
+            dispatch(receivePerson(json));
+          })
+        }
         )
+        
        
     }
   }

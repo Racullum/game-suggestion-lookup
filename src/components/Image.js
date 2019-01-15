@@ -2,9 +2,9 @@ import React from 'react'
 import '../css/Image.css'
 
 
-const Image = ({url}) => (
+const Image = ({imgUrl}) => (
     <div>
-        <img src={url}></img>
+        <img src={"https:" + imgUrl} style={{height: 35 +'vh' }}></img>
     </div>
 )
 

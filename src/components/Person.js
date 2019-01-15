@@ -9,9 +9,8 @@ import Bio from './Bio'
 
 const Person = ({person}) => (
     <div className="card">
-        <Image />
         <PersonName personName={person.personName}/>
-        <Bio />
+        <Bio bio={person.bio}/>
     </div>
     
 )

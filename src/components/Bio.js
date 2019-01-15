@@ -1,11 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Bio = ({text}) => (
-    <div>
+const Bio = ({bio}) => (
         <p>
-            {text}
+            {bio}
         </p>
-    </div>
 )
+
+Bio.propTypes = {
+    bio: PropTypes.string.isRequired
+}
 
 export default Bio
