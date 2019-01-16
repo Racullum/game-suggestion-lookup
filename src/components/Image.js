@@ -4,7 +4,7 @@ import '../css/Image.css'
 
 const Image = ({imgUrl}) => (
     <div>
-        <img src={"https:" + imgUrl} style={{height: 35 +'vh' }}></img>
+        <img src={imgUrl} style={{height: 65 +'vh' }}></img>
     </div>
 )
 

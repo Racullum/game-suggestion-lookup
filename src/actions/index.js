@@ -32,6 +32,7 @@ export const clearSuggestions = () => {
   }
 }
 
+// Take an id for a cover image and return the url to the actual image
 function generateImageUrl(coverId) {
   console.log("Calling generate image" + coverId.cover);
 
@@ -52,11 +53,8 @@ function generateImageUrl(coverId) {
       error => console.log('An error occurred.', error)
     )
     .then(json => {
-
-      const coverImageJson = {coverImage: json[0].url};
-      console.log(json);
-      const jsonBody = {...coverId, ...{coverImage: json[0].url}};
-      console.log(jsonBody.coverImage);
+     
+      const jsonBody = {...coverId, ...{coverImage: 'https://images.igdb.com/igdb/image/upload/t_cover_big/'+json[0].image_id+'.jpg'}};
       return jsonBody;
     })
   }
@@ -99,8 +97,7 @@ export function fetchPerson(personName) {
           // We can dispatch many times!
           // Here, we update the app state with the results of the API call.
           
-          generateImageUrl(json[0])
-          .then(json => {
+          generateImageUrl(json[0]).then(json => {
             dispatch(receivePerson(json));
           })
         }
