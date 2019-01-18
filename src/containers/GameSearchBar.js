@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
   }
   
 //Destructring dispatch method from the redux store we get access from connect
-const PersonSearchBar = ({dispatch}) => {
+const GameSearchBar = ({dispatch}) => {
 
     let input;
 
@@ -37,4 +37,4 @@ const PersonSearchBar = ({dispatch}) => {
     )
 }
 
-export default connect(mapStateToProps)(PersonSearchBar)
+export default connect(mapStateToProps)(GameSearchBar)

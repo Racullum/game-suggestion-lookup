@@ -3,18 +3,21 @@ import PropTypes from 'prop-types'
 
 import '../css/Person.css'
 
-import PersonName from './PersonName'
+import GameName from './GameName'
 import Image from './Image'
 import Bio from './Bio'
 import ImageContainer from '../containers/ImageContainer';
 
 const Person = ({gameName, coverId, summary}) => (
     <div className="card">
-        <PersonName personName={gameName}/>
-        <ImageContainer coverId={coverId} />
+        <div>
+            <GameName gameName={gameName}/>
+            <ImageContainer coverId={coverId} />
+        </div>
         <Bio bio={summary}/>
+       
     </div>
-    
+     
 )
 
 Person.propTypes = {

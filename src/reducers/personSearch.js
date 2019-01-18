@@ -5,9 +5,7 @@ import {
 } from '../actions'
 
 const initialState = {
-    personName: '',
-    url: '',
-    bio: '',
+    activeGameId: 0,
     suggestedGames: [],
     isFetching: false,
     inputValue: ''
@@ -28,7 +26,8 @@ const person = (state = initialState, action) => {
                 console.log(action)
             return Object.assign({}, state, {
                 isFetching: false,
-                suggestedGames: action.json
+                suggestedGames: action.json,
+                activeGameId: action.json[0].id
             })
         default:
             return state
