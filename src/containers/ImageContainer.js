@@ -18,7 +18,7 @@ class ImageContainer extends React.Component {
         generateImageUrl(this.props.coverId)
         .then(json => {
             console.log("returning json " + json[0].url)
-            this.setState({imgUrl: json[0].url})
+            this.setState({imgUrl: '//images.igdb.com/igdb/image/upload/t_cover_big/' + json[0].image_id + '.jpg'})
         })
     }
 

@@ -40,7 +40,7 @@ export function generateImageUrl(coverIds) {
       return fetch("/covers", {
         mode: "no-cors",
         method: 'post',
-        body: ('fields url; where id=(' + coverIds +');'),
+        body: ('fields image_id; where id=(' + coverIds +');'),
         headers: {
           "user-key": "a1d21661c77bb5ba89f0797f186f968e",
         }
