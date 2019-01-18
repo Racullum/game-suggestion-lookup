@@ -13,7 +13,7 @@ const mapStateToProps = state => ({
 
 const PersonContainer = ({person}) => {
            console.log("IN person container with " + person.suggestedGames)
-           if(person.suggestedGames.length != 0){
+       
                 return (
                         <div>
                             <ul>
@@ -22,16 +22,9 @@ const PersonContainer = ({person}) => {
                                     <Person gameName={game.name} summary={game.summary} coverId={game.cover}/>
                                 </li>
                                 ))}
-                            </ul>
-                            <Person />
+                            </ul>                      
                         </div>
                     )
-            }
-            else {
-                return (
-                    <div />
-                )
-            }
 }
 
 export default connect(mapStateToProps)(PersonContainer)

@@ -8,15 +8,16 @@ import { connect } from 'react-redux'
 
 function mapStateToProps(state) {
   return {
+    isFetching: state.person.isFetching,
     suggestedGames: state.person.suggestedGames
   }
 }
 
-const App = ({suggestedGames}) => {
-    console.log(suggestedGames)
-    console.log(suggestedGames > 0)
+const App = ({isFetching, suggestedGames}) => {
+ 
+    
      return( <div>
-        { (suggestedGames.length > 0) ?
+        { ( (!isFetching) && (suggestedGames.length > 0) ) ?
           [
           <PersonSearchBar />,
           <PersonContainer /> 
