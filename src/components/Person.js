@@ -10,8 +10,8 @@ import ImageContainer from '../containers/ImageContainer';
 
 const Person = ({gameName, coverId, summary}) => (
     <div className="card">
-        <ImageContainer coverId={coverId} />
         <PersonName personName={gameName}/>
+        <ImageContainer coverId={coverId} />
         <Bio bio={summary}/>
     </div>
     
