@@ -8,6 +8,7 @@ const initialState = {
     personName: '',
     url: '',
     bio: '',
+    suggestedGames: [],
     isFetching: false,
     inputValue: ''
 }
@@ -27,10 +28,7 @@ const person = (state = initialState, action) => {
                 console.log(action)
             return Object.assign({}, state, {
                 isFetching: false,
-                personName: action.person.name,
-                url: action.person.url,
-                img: action.person.coverImage,
-                bio: action.person.summary
+                suggestedGames: action.json
             })
         default:
             return state

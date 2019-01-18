@@ -6,20 +6,22 @@ import '../css/Person.css'
 import PersonName from './PersonName'
 import Image from './Image'
 import Bio from './Bio'
+import ImageContainer from '../containers/ImageContainer';
 
-const Person = ({person}) => (
+const Person = ({gameName, coverId, summary}) => (
     <div className="card">
-        <PersonName personName={person.personName}/>
-        <Bio bio={person.bio}/>
+        <ImageContainer coverId={coverId} />
+        <PersonName personName={gameName}/>
+        <Bio bio={summary}/>
     </div>
     
 )
 
 Person.propTypes = {
     person: PropTypes.shape({
-        personName: PropTypes.string.isRequired,
-        url: PropTypes.string.isRequired,
-        bio: PropTypes.string.isRequired
+        gameName: PropTypes.string.isRequired,
+        img: PropTypes.string.isRequired,
+        summary: PropTypes.string.isRequired
     }).isRequired
 }
 
