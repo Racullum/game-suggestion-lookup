@@ -1,11 +1,11 @@
 import React from 'react'
-import '../css/Image.css'
 
 
-const Image = ({imgUrl}) => (
-    <div>
-        <img src={imgUrl} style={{height: 65 +'vh' }}></img>
-    </div>
+
+const Image = ({imgUrl, onClick}) => (
+
+        <img src={imgUrl} onClick={onClick}></img>
+
 )
 
 export default Image

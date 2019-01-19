@@ -1,15 +1,16 @@
 import { connect } from 'react-redux'
 import React from 'react'
 import '../css/GameContainer.css'
-import { searchForPerson } from '../actions'
 import GameName from '../components/GameName'
 import Bio from '../components/Bio'
 import ImageContainer from './ImageContainer';
+import '../css/App.css'
+
       
 function findActiveGame(id, suggestedGames) {
     console.log(" Id is " + id + " suggestions are " + suggestedGames)
     for (let game of suggestedGames) {
-        if(game.id = id) {
+        if(game.id == id) {
             return game;
         }
     }
@@ -24,12 +25,14 @@ const GameContainer = ({activeGame}) => {
        
                 return (
                         <div className="game-container">
-                            <ImageContainer coverId={activeGame.cover} />
+                            <ImageContainer coverId={activeGame.cover} size='cover_big' className="App-ActiveImageContainer"/>
                             <div className="text">
                                 <GameName gameName={activeGame.name} />
+                                <hr></hr>
                                 <Bio bio={activeGame.summary} />
+                               
                             </div>
-                                       
+                            
                         </div>
                     )
 }

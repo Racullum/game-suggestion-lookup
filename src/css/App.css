@@ -1,5 +1,12 @@
 .App {
-  text-align: center;
+
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center !important;
+  background: linear-gradient(to top left, rgb(0, 0, 0), rgb(33, 33, 33)) !important;
 }
 
 .App-logo {
@@ -20,6 +27,19 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-ActiveImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.App-SuggestionImageContainer {
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+  width: 6vw;
+  height: 20vh
 }
 
 @keyframes App-logo-spin {

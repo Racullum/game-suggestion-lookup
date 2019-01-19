@@ -25,6 +25,14 @@ export const updateInputValue = (value) => {
   }
 }
 
+export const UPDATE_ACTIVE_GAME = 'UPDATE_ACTIVE_GAME'
+export const updateActiveGame = (id) => {
+  return {
+    type: UPDATE_ACTIVE_GAME,
+    activeGameId: id
+  }
+}
+
 export const CLEAR_SUGGESTIONS = 'CLEAR_SUGGESTIONS'
 export const clearSuggestions = () => {
   return {

@@ -1,7 +1,8 @@
 import {
     SEARCH_FOR_PERSON,
     RECEIVE_PERSON,
-    UPDATE_INPUT_VALUE
+    UPDATE_INPUT_VALUE,
+    UPDATE_ACTIVE_GAME
 } from '../actions'
 
 const initialState = {
@@ -21,6 +22,10 @@ const person = (state = initialState, action) => {
         case UPDATE_INPUT_VALUE:
             return Object.assign({}, state, {
                 inputValue: action.inputValue
+            })
+        case UPDATE_ACTIVE_GAME:
+            return Object.assign({}, state, {
+                activeGameId: action.activeGameId
             })
         case RECEIVE_PERSON:
                 console.log(action)

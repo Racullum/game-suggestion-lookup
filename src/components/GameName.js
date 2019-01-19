@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../css/GameContainer.css'
 
 const GameName = ({gameName}) => (
-    <div>
+    
         <h1>{gameName}</h1>
-    </div>
+    
 )
 
 GameName.propTypes = {
