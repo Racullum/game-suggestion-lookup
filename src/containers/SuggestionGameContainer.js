@@ -7,7 +7,7 @@ import ImageContainer from './ImageContainer';
 const SuggestionGameContainer = ({dispatch, suggestedGame}) => {
     
     return (
-        <ImageContainer coverId={suggestedGame.cover} style={{"border": "1px solid red"}} onClick={(e) => dispatch(updateActiveGame(suggestedGame.id))} size='cover_small' />
+        <ImageContainer coverId={suggestedGame.cover} onClick={(e) => dispatch(updateActiveGame(suggestedGame.id))} size='cover_small' />
     )
 }
 

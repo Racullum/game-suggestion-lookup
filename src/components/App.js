@@ -20,17 +20,24 @@ const App = ({isFetching, suggestedGames}) => {
      return( 
       <div className="App">
         { ( (!isFetching) && (suggestedGames.length > 0) ) ?
-          [
-          
-          <GameContainer /> ,
-          <SuggestionsContainer />   
-          ]
-        :
-          <GameSearchBar />
-        }
-        
+            [
+            
+            <div className="App-GamesContainer">
+              <GameContainer />
+              <SuggestionsContainer /> 
+            </div>,
+            <div className="App-SideBarSearchContainer">
+              <GameSearchBar />
+            </div>
+            ]
+          :
+            <GameSearchBar />
+          }
       
       </div>
+
+
+     
      )
       }
 

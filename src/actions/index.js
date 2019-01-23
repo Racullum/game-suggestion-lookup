@@ -132,11 +132,17 @@ export function fetchPerson(gameName) {
       // In this case, we return a promise to wait for.
       // This is not required by thunk middleware, but it is convenient for us.
       fetchGame(gameName)
-      .then(json => {  
-        fetchSuggestedGames(json)
-        .then(json => {
-            dispatch(receivePerson(json))
-          })         
+      .then(json => { 
+        if(json == undefined) {
+          alert("Could not find " + '"' + gameName + '"')
+        }
+        else {
+          fetchSuggestedGames(json)
+          .then(json => {
+              dispatch(receivePerson(json))
+            })  
+        }
+       
         })
 
     }

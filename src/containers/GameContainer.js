@@ -25,7 +25,10 @@ const GameContainer = ({activeGame}) => {
        
                 return (
                         <div className="game-container">
-                            <ImageContainer coverId={activeGame.cover} size='cover_big' className="App-ActiveImageContainer"/>
+                            <div className="App-ActiveImageContainer">
+                                <ImageContainer coverId={activeGame.cover} size='cover_big'/>
+                            </div>
+                     
                             <div className="text">
                                 <GameName gameName={activeGame.name} />
                                 <hr></hr>

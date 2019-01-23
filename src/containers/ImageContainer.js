@@ -42,9 +42,7 @@ class ImageContainer extends React.Component {
     render() {
    
             return (
-          
-            <Image imgUrl={this.state.imgUrl} onClick={this.props.onClick}/>
-            
+                <Image imgUrl={this.state.imgUrl} onClick={this.props.onClick}/>  
             )
         
 

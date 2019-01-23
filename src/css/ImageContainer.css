@@ -6,9 +6,9 @@
 
 .ImageContainer {
     display: flex;
- 
-    width: 6vw;
-    height: 12vh;
+    border: solid red;
+    
+    height: 50vh;
     justify-content: center;
     
 }
