@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchGame } from "../actions";
+import "../css/GameSearchBar.css";
 
 const mapStateToProps = state => {
   return {
@@ -25,8 +26,16 @@ const GameSearchBar = ({ dispatch }) => {
           input.value = "";
         }}
       >
-        <input ref={node => (input = node)} />
-        <button type="submit">Search</button>
+        <div className="Search">
+          <input
+            type="text"
+            ref={node => (input = node)}
+            placeholder="Search..."
+          />
+          <button type="submit">
+            <i className="fa fa-search" />
+          </button>
+        </div>
       </form>
     </div>
   );

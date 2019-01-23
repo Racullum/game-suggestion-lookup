@@ -9,7 +9,8 @@ const mapStateToProps = state => ({
 });
 
 const SuggestionsContainer = ({ suggestedGames, activeGameId }) => {
-  const activeSuggestion = "SuggestionsContainer-ActiveSuggestionImageContainer";
+  const activeSuggestion =
+    "SuggestionsContainer-ActiveSuggestionImageContainer";
   const nonactiveSuggestion = "SuggestionsContainer-SuggestionImageContainer";
 
   return (

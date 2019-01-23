@@ -2,6 +2,7 @@ import {
   SEARCH_FOR_GAME,
   RECEIVE_GAME,
   UPDATE_INPUT_VALUE,
+  UPDATE_SEARCHED_GAME,
   UPDATE_ACTIVE_GAME
 } from "../actions";
 
@@ -9,6 +10,7 @@ const initialState = {
   activeGameId: 0,
   suggestedGames: [],
   isFetching: false,
+  searchedGame: "",
   inputValue: ""
 };
 
@@ -25,6 +27,10 @@ const suggestionApp = (state = initialState, action) => {
     case UPDATE_ACTIVE_GAME:
       return Object.assign({}, state, {
         activeGameId: action.activeGameId
+      });
+    case UPDATE_SEARCHED_GAME:
+      return Object.assign({}, state, {
+        searchedGame: action.searchedGame
       });
     case RECEIVE_GAME:
       return Object.assign({}, state, {

@@ -1,0 +1,33 @@
+input {
+  background: rgba(255, 255, 255, 0.26);
+
+  height: 4vh;
+  color: white;
+  width: 10vw;
+  text-indent: 20px;
+  border-radius: 20px 20px 20px;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: white;
+}
+
+button {
+  background: transparent;
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: white;
+}
+
+.Search {
+  position: relative;
+}

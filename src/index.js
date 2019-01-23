@@ -10,6 +10,7 @@ import { createStore, applyMiddleware } from "redux";
 
 import suggestionApp from "./reducers";
 import App from "./components/App";
+import "font-awesome/css/font-awesome.min.css";
 import "./css/index.css";
 
 const store = createStore(suggestionApp, applyMiddleware(thunkMiddleware));

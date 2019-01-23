@@ -28,11 +28,11 @@ export const updateActiveGame = id => {
   };
 };
 
-export const CLEAR_SUGGESTIONS = "CLEAR_SUGGESTIONS";
-export const clearSuggestions = () => {
+export const UPDATE_SEARCHED_GAME = "UPDATE_SEARCHED_GAME";
+export const updateSearchedGame = game => {
   return {
-    type: CLEAR_SUGGESTIONS,
-    suggestions: []
+    type: UPDATE_SEARCHED_GAME,
+    searchedGame: game
   };
 };
 
@@ -41,7 +41,7 @@ function getGame(gameName) {
   return fetch("/games", {
     mode: "no-cors",
     method: "post",
-    body: 'fields similar_games; where name ~"' + gameName + '";',
+    body: 'fields name, similar_games; where name ~"' + gameName + '";',
     headers: {
       "user-key": "a1d21661c77bb5ba89f0797f186f968e"
     }
@@ -87,6 +87,8 @@ export function fetchGame(gameName) {
       if (undefined === json) {
         alert("Could not find " + "'" + gameName + "'");
       } else {
+        console.log(json);
+        dispatch(updateSearchedGame(json.name));
         fetchSuggestedGames(json).then(json => {
           dispatch(receiveGame(json));
         });
