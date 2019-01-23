@@ -43,7 +43,7 @@ function getGame(gameName) {
     method: "post",
     body: 'fields name, similar_games; where name ~"' + gameName + '";',
     headers: {
-      "user-key": "a1d21661c77bb5ba89f0797f186f968e"
+      "user-key": process.env.REACT_APP_API_KEY
     }
   })
     .then(
@@ -66,7 +66,7 @@ function fetchSuggestedGames(game) {
       game.similar_games.join(", ") +
       ");",
     headers: {
-      "user-key": "a1d21661c77bb5ba89f0797f186f968e"
+      "user-key": process.env.REACT_APP_API_KEY
     }
   })
     .then(
@@ -87,7 +87,6 @@ export function fetchGame(gameName) {
       if (undefined === json) {
         alert("Could not find " + "'" + gameName + "'");
       } else {
-        console.log(json);
         dispatch(updateSearchedGame(json.name));
         fetchSuggestedGames(json).then(json => {
           dispatch(receiveGame(json));

@@ -6,7 +6,7 @@ export function generateImageUrl(coverIds) {
     method: "post",
     body: "fields image_id; where id=(" + coverIds + ");",
     headers: {
-      "user-key": "a1d21661c77bb5ba89f0797f186f968e"
+      "user-key": process.env.REACT_APP_API_KEY
     }
   })
     .then(
