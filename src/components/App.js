@@ -7,8 +7,8 @@ import { connect } from "react-redux";
 
 function mapStateToProps(state) {
   return {
-    isFetching: state.person.isFetching,
-    suggestedGames: state.person.suggestedGames
+    isFetching: state.isFetching,
+    suggestedGames: state.suggestedGames
   };
 }
 

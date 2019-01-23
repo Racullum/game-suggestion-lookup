@@ -1,16 +1,14 @@
-// The idea behind actions is that they describe what should happen to the previous state
-
 import fetch from "cross-fetch";
 
-export const SEARCH_FOR_PERSON = "SEARCH_FOR_PERSON";
-export const searchForPerson = text => ({
-  type: SEARCH_FOR_PERSON,
+export const SEARCH_FOR_GAME = "SEARCH_FOR_GAME";
+export const searchForGame = text => ({
+  type: SEARCH_FOR_GAME,
   text
 });
 
-export const RECEIVE_PERSON = "RECEIVE_PERSON";
-export const receivePerson = json => ({
-  type: RECEIVE_PERSON,
+export const RECEIVE_GAME = "RECEIVE_GAME";
+export const receiveGame = json => ({
+  type: RECEIVE_GAME,
   json
 });
 
@@ -38,7 +36,8 @@ export const clearSuggestions = () => {
   };
 };
 
-function fetchGame(gameName) {
+// Fetch a single game
+function getGame(gameName) {
   return fetch("/games", {
     mode: "no-cors",
     method: "post",
@@ -57,6 +56,7 @@ function fetchGame(gameName) {
     });
 }
 
+// Returns array of games that are similar to input game
 function fetchSuggestedGames(game) {
   return fetch("/games", {
     mode: "no-cors",
@@ -79,15 +79,16 @@ function fetchSuggestedGames(game) {
     });
 }
 
-export function fetchPerson(gameName) {
+// Calls the functions responsible for providing our state its info
+export function fetchGame(gameName) {
   return function(dispatch) {
-    dispatch(searchForPerson(gameName));
-    fetchGame(gameName).then(json => {
+    dispatch(searchForGame(gameName));
+    getGame(gameName).then(json => {
       if (undefined === json) {
         alert("Could not find " + "'" + gameName + "'");
       } else {
         fetchSuggestedGames(json).then(json => {
-          dispatch(receivePerson(json));
+          dispatch(receiveGame(json));
         });
       }
     });

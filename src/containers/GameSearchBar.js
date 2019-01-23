@@ -1,17 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchPerson } from "../actions";
+import { fetchGame } from "../actions";
 
-const mapStateToProps = (state, ownProps) => {
-  console.log("In personsearch bar" + state);
+const mapStateToProps = state => {
   return {
-    suggestions: state.person.suggestions,
-    isFetching: state.person.isFetching,
-    inputValue: state.person.inputValue
+    suggestions: state.suggestions,
+    isFetching: state.isFetching,
+    inputValue: state.inputValue
   };
 };
 
-//Destructring dispatch method from the redux store we get access from connect
 const GameSearchBar = ({ dispatch }) => {
   let input;
 
@@ -23,7 +21,7 @@ const GameSearchBar = ({ dispatch }) => {
           if (!input.value.trim()) {
             return;
           }
-          dispatch(fetchPerson(input.value));
+          dispatch(fetchGame(input.value));
           input.value = "";
         }}
       >

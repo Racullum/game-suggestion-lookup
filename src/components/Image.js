@@ -1,7 +1,8 @@
 import React from "react";
+import "../css/Image.css";
 
 const Image = ({ imgUrl, onClick }) => (
-  <img src={imgUrl} onClick={onClick} style={{ width: "100%" }} alt={imgUrl} />
+  <img src={imgUrl} onClick={onClick} alt={imgUrl} />
 );
 
 export default Image;

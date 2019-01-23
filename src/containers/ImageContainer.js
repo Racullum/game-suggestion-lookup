@@ -17,10 +17,9 @@ class ImageContainer extends React.Component {
     );
   }
 
+  // Generates a single url from a cover id of a single game
   generateImageUrlFromCoverId(coverId, size) {
-    console.log("Cover id is " + coverId);
     generateImageUrl(coverId).then(json => {
-      console.log("returning json " + json[0].image_id);
       this.setState({
         imgUrl:
           "//images.igdb.com/igdb/image/upload/t_" +
@@ -33,7 +32,6 @@ class ImageContainer extends React.Component {
   }
 
   componentDidMount() {
-    console.log("component mounted " + this.props.coverId);
     this.generateImageUrlFromCoverId(this.props.coverId, this.props.size);
   }
 
@@ -49,7 +47,7 @@ class ImageContainer extends React.Component {
 }
 
 ImageContainer.propTypes = {
-  coverId: PropTypes.string.isRequired
+  coverId: PropTypes.number.isRequired
 };
 
 export default connect()(ImageContainer);

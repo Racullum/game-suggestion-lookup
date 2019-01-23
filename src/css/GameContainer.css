@@ -5,6 +5,14 @@
   height: 60vh;
 }
 
+.GameContainer-ActiveImageContainer {
+  display: flex;
+  justify-content: center;
+
+  width: 18vw;
+  height: 48vh;
+}
+
 .text {
   font-size: 1vw;
   width: 30vw;
