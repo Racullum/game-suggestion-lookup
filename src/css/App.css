@@ -12,6 +12,15 @@
   ) !important;
 }
 
+.App-LandingPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: auto;
+}
+
 .App-SideBarSearchContainer {
   height: 84vh;
   padding-top: 0vh;

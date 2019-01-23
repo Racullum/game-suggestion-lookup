@@ -15,23 +15,27 @@ function mapStateToProps(state) {
 const App = ({ suggestedGames, searchedGame }) => {
   return (
     <div className="App">
-      {suggestedGames.length > 0 ? (
-        [
-          <div className="App-LogoContainer">
-            <h1>What Should I Play?</h1>
-          </div>,
-          <div className="App-GamesContainer">
-            <GameContainer />
-            <h3>More Games Like {searchedGame} </h3>
-            <SuggestionsContainer />
-          </div>,
-          <div className="App-SideBarSearchContainer">
-            <GameSearchBar />
-          </div>
-        ]
-      ) : (
-        <GameSearchBar />
-      )}
+      {suggestedGames.length > 0
+        ? [
+            <div className="App-LogoContainer">
+              <h1>What Should I Play?</h1>
+            </div>,
+            <div className="App-GamesContainer">
+              <GameContainer />
+              <h3>More Games Like {searchedGame} </h3>
+              <SuggestionsContainer />
+            </div>,
+            <div className="App-SideBarSearchContainer">
+              <GameSearchBar />
+            </div>
+          ]
+        : [
+            <div className="App-LandingPage">
+              <h1>What Should I Play?</h1>
+
+              <GameSearchBar />
+            </div>
+          ]}
     </div>
   );
 };
