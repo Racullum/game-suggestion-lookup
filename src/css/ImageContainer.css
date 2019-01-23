@@ -1,14 +1,12 @@
 .profileImage {
-    width: 10vw;
-    height: 10vh;
-
+  width: 10vw;
+  height: 10vh;
 }
 
 .ImageContainer {
-    display: flex;
-    border: solid red;
-    
-    height: 50vh;
-    justify-content: center;
-    
+  display: flex;
+  border: solid red;
+
+  height: 50vh;
+  justify-content: center;
 }

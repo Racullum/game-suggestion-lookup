@@ -1,27 +1,20 @@
 .game-container {
-    display: flex;
+  display: flex;
 
-  
-
-    width: 60vw;
-    height: 60vh;
+  width: 60vw;
+  height: 60vh;
 }
 
 .text {
- 
-    font-size: 1vw;
-    width: 30vw;
-    margin: 0;
-   
-    padding-left: 4em;
+  font-size: 1vw;
+  width: 30vw;
+  margin: 0;
 
+  padding-left: 4em;
 }
 
-.text h1{
-    
-    margin: 0 auto;
-    
-    padding: 0;
-    
-    
+.text h1 {
+  margin: 0 auto;
+
+  padding: 0;
 }

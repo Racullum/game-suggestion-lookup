@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
+const Image = ({ imgUrl, onClick }) => (
+  <img src={imgUrl} onClick={onClick} style={{ width: "100%" }} alt={imgUrl} />
+);
 
-
-const Image = ({imgUrl, onClick}) => (
-
-        <img src={imgUrl} onClick={onClick} style={{"width": "100%"}}></img>
-
-)
-
-export default Image
+export default Image;

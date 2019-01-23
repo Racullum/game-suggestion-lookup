@@ -1,4 +1,5 @@
-html,body {
+html,
+body {
   margin: 0px;
   padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -6,8 +7,11 @@ html,body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to top, rgb(37, 42, 62), (60, 81, 113)) !important;
-  
+  background-image: linear-gradient(
+    to top,
+    rgb(37, 42, 62),
+    (60, 81, 113)
+  ) !important;
 }
 
 code {
