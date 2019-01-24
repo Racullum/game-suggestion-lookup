@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "324cdcf6133a38410dca",
+    "revision": "e1b948b8940f9eeb67d3",
     "url": "/game-suggestion-lookup/static/css/main.4452a315.chunk.css"
   },
   {
-    "revision": "324cdcf6133a38410dca",
-    "url": "/game-suggestion-lookup/static/js/main.324cdcf6.chunk.js"
+    "revision": "e1b948b8940f9eeb67d3",
+    "url": "/game-suggestion-lookup/static/js/main.e1b948b8.chunk.js"
   },
   {
     "revision": "532d8642f1e8c96e91a2",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/game-suggestion-lookup/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "8754c42debb2fd666919522b8fba249c",
+    "revision": "d8a8abdff3cf2e5b0ff121582c59f66a",
     "url": "/game-suggestion-lookup/index.html"
   }
 ];
