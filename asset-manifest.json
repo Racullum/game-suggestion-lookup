@@ -1,7 +1,7 @@
 {
   "main.css": "/game-suggestion-lookup/static/css/main.4452a315.chunk.css",
-  "main.js": "/game-suggestion-lookup/static/js/main.e1b948b8.chunk.js",
-  "main.js.map": "/game-suggestion-lookup/static/js/main.e1b948b8.chunk.js.map",
+  "main.js": "/game-suggestion-lookup/static/js/main.146cd55d.chunk.js",
+  "main.js.map": "/game-suggestion-lookup/static/js/main.146cd55d.chunk.js.map",
   "static/css/1.faae105e.chunk.css": "/game-suggestion-lookup/static/css/1.faae105e.chunk.css",
   "static/js/1.532d8642.chunk.js": "/game-suggestion-lookup/static/js/1.532d8642.chunk.js",
   "static/js/1.532d8642.chunk.js.map": "/game-suggestion-lookup/static/js/1.532d8642.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/css/main.4452a315.chunk.css.map": "/game-suggestion-lookup/static/css/main.4452a315.chunk.css.map",
   "static/css/1.faae105e.chunk.css.map": "/game-suggestion-lookup/static/css/1.faae105e.chunk.css.map",
   "index.html": "/game-suggestion-lookup/index.html",
-  "precache-manifest.8d4d6f49235a4f52a44ca4af6dc1517c.js": "/game-suggestion-lookup/precache-manifest.8d4d6f49235a4f52a44ca4af6dc1517c.js",
+  "precache-manifest.ddb542cd65dfd85a4a132576cccaaa35.js": "/game-suggestion-lookup/precache-manifest.ddb542cd65dfd85a4a132576cccaaa35.js",
   "service-worker.js": "/game-suggestion-lookup/service-worker.js"
 }
