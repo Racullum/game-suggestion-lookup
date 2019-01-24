@@ -26,6 +26,30 @@ This project uses ESLINT and Prettier, to lint and style code.
 
 [REDUX](https://github.com/reduxjs/redux)
 
+[NODE JS](https://nodejs.org/en/)
+
+## Getting it running
+
+Because the IGDB API does not support CORS under their free tier there is no production build at this time. In order to run this on your local machine, get an [API Key](https://api.igdb.com/signup) and then create a local environment file like so ...
+
+### .env.local
+
+```
+REACT_APP_API_KEY=INSERT_KEY_HERE
+REACT_APP_API_URL=/
+```
+
+then to run the local server type in
+
+```
+npm start
+```
+
+## Improvements to be made
+
+- Make site more friendly to differing display sizes
+- Create backend API to get around CORS issue for production build
+
 ## License
 
 MIT
