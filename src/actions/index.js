@@ -38,7 +38,7 @@ export const updateSearchedGame = game => {
 
 // Fetch a single game
 function getGame(gameName) {
-  return fetch("/games", {
+  return fetch(process.env.REACT_APP_API_URL + "games", {
     mode: "no-cors",
     method: "post",
     body: 'fields name, similar_games; where name ~"' + gameName + '";',
@@ -58,7 +58,7 @@ function getGame(gameName) {
 
 // Returns array of games that are similar to input game
 function fetchSuggestedGames(game) {
-  return fetch("/games", {
+  return fetch(process.env.REACT_APP_API_URL + "games", {
     mode: "no-cors",
     method: "post",
     body:
