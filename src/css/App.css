@@ -18,11 +18,15 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+
+  font-size: 1rem;
   width: auto;
 }
 
 .App-SideBarSearchContainer {
+  width: 20vw;
   height: 84vh;
+  margin-right: 3vw;
   padding-top: 0vh;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -30,7 +34,9 @@
 
 .App-GamesContainer {
   color: white;
+
   height: 100vh;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -39,7 +45,10 @@
 
 .App-LogoContainer {
   height: 90vh;
-  padding-top: 0vh;
+  margin-left: 3vw;
+  width: 20vw;
+  font-size: 1vw;
+
   margin-bottom: 0;
   padding-bottom: 0;
 }

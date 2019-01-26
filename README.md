@@ -47,7 +47,7 @@ npm start
 
 ## Improvements to be made
 
-- Make site more friendly to differing display sizes
+- Make site more friendly to tablet/mobile
 - Create backend API to get around CORS issue for production build
 
 ## License
