@@ -38,12 +38,20 @@ export const updateSearchedGame = game => {
 
 // Fetch a single game
 function getGame(gameName) {
-  return fetch(process.env.REACT_APP_API_URL + "games", {
+  /*return fetch(process.env.REACT_APP_API_URL + "games", {
     mode: "no-cors",
     method: "post",
     body: 'fields name, similar_games; where name ~"' + gameName + '";',
     headers: {
       "user-key": process.env.REACT_APP_API_KEY
+    }
+  })
+  */
+  return fetch('api/games', {
+    method: "post",
+    body: 'fields name, similar_games; where name ~"' + gameName+ '";',
+    headers: {
+      "Content-Type": "text/plain"
     }
   })
     .then(
@@ -58,15 +66,14 @@ function getGame(gameName) {
 
 // Returns array of games that are similar to input game
 function fetchSuggestedGames(game) {
-  return fetch(process.env.REACT_APP_API_URL + "games", {
-    mode: "no-cors",
+  return fetch("/api/games", {
     method: "post",
     body:
       "fields name, summary, cover; where id=(" +
       game.similar_games.join(", ") +
       ");",
     headers: {
-      "user-key": process.env.REACT_APP_API_KEY
+      "Content-Type": "text/plain"
     }
   })
     .then(

@@ -1,12 +1,11 @@
 import fetch from "cross-fetch";
 
 export function generateImageUrl(coverIds) {
-  return fetch(process.env.REACT_APP_API_URL + "covers", {
-    mode: "no-cors",
+  return fetch('/api/covers', {
     method: "post",
     body: "fields image_id; where id=(" + coverIds + ");",
     headers: {
-      "user-key": process.env.REACT_APP_API_KEY
+      "Content-Type": "text/plain"
     }
   })
     .then(
