@@ -1,10 +1,12 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const path = require('path');
 const fetch = require('node-fetch');
 const bodyParser = require('body-parser');
 
 const app = express();
 
+dotenv.load();
 app.use(bodyParser.text());
 
 // Serve the static files from the React app
@@ -12,12 +14,12 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 // An api endpoint that returns a game object from igdb
 app.post('/api/games', (req,res) => {
-    return fetch('https://api-v3.igdb.com/games', {
+    return fetch(process.env.REACT_APP_API_URL + '/games', {
         mode: "no-cors",
         method: "post",
         body: req.body,
         headers: {
-          "user-key": "a1d21661c77bb5ba89f0797f186f968e"
+          "user-key": process.env.REACT_APP_API_KEY
         }
       })
     .then(
@@ -32,14 +34,14 @@ app.post('/api/games', (req,res) => {
     )
 });
 
-
+// An api endpoint that returns a url to access a cover art image
 app.post('/api/covers', (req, res) => {
-    return fetch('https://api-v3.igdb.com/covers', {
+    return fetch(process.env.REACT_APP_API_URL + '/covers', {
         mode: "no-cors",
         method: "post",
         body: req.body,
         headers: {
-          "user-key": "a1d21661c77bb5ba89f0797f186f968e"
+          "user-key": process.env.REACT_APP_API_KEY
         }
       })
     .then(
