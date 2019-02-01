@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "146cd55d5020f34a86c7",
-    "url": "/game-suggestion-lookup/static/css/main.4452a315.chunk.css"
+    "revision": "60aa22278ba898f5be49",
+    "url": "/game-suggestion-lookup/static/css/main.24639367.chunk.css"
   },
   {
-    "revision": "146cd55d5020f34a86c7",
-    "url": "/game-suggestion-lookup/static/js/main.146cd55d.chunk.js"
+    "revision": "60aa22278ba898f5be49",
+    "url": "/game-suggestion-lookup/static/js/main.60aa2227.chunk.js"
   },
   {
     "revision": "532d8642f1e8c96e91a2",
@@ -28,19 +28,19 @@ self.__precacheManifest = [
     "url": "/game-suggestion-lookup/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
-    "revision": "b06871f281fee6b241d60582ae9369b9",
-    "url": "/game-suggestion-lookup/static/media/fontawesome-webfont.b06871f2.ttf"
-  },
-  {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
     "url": "/game-suggestion-lookup/static/media/fontawesome-webfont.674f50d2.eot"
+  },
+  {
+    "revision": "b06871f281fee6b241d60582ae9369b9",
+    "url": "/game-suggestion-lookup/static/media/fontawesome-webfont.b06871f2.ttf"
   },
   {
     "revision": "912ec66d7572ff821749319396470bde",
     "url": "/game-suggestion-lookup/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "c26da3ac247bd7a15cdc551a70ccaeaa",
+    "revision": "038c3558c1384209f864d8cd645edf46",
     "url": "/game-suggestion-lookup/index.html"
   }
 ];

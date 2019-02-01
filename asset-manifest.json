@@ -1,16 +1,16 @@
 {
-  "main.css": "/game-suggestion-lookup/static/css/main.4452a315.chunk.css",
-  "main.js": "/game-suggestion-lookup/static/js/main.146cd55d.chunk.js",
-  "main.js.map": "/game-suggestion-lookup/static/js/main.146cd55d.chunk.js.map",
+  "main.css": "/game-suggestion-lookup/static/css/main.24639367.chunk.css",
+  "main.js": "/game-suggestion-lookup/static/js/main.60aa2227.chunk.js",
+  "main.js.map": "/game-suggestion-lookup/static/js/main.60aa2227.chunk.js.map",
   "static/css/1.faae105e.chunk.css": "/game-suggestion-lookup/static/css/1.faae105e.chunk.css",
   "static/js/1.532d8642.chunk.js": "/game-suggestion-lookup/static/js/1.532d8642.chunk.js",
   "static/js/1.532d8642.chunk.js.map": "/game-suggestion-lookup/static/js/1.532d8642.chunk.js.map",
   "runtime~main.js": "/game-suggestion-lookup/static/js/runtime~main.60dbc466.js",
   "runtime~main.js.map": "/game-suggestion-lookup/static/js/runtime~main.60dbc466.js.map",
   "static/media/font-awesome.min.css": "/game-suggestion-lookup/static/media/fontawesome-webfont.912ec66d.svg",
-  "static/css/main.4452a315.chunk.css.map": "/game-suggestion-lookup/static/css/main.4452a315.chunk.css.map",
+  "static/css/main.24639367.chunk.css.map": "/game-suggestion-lookup/static/css/main.24639367.chunk.css.map",
   "static/css/1.faae105e.chunk.css.map": "/game-suggestion-lookup/static/css/1.faae105e.chunk.css.map",
   "index.html": "/game-suggestion-lookup/index.html",
-  "precache-manifest.ddb542cd65dfd85a4a132576cccaaa35.js": "/game-suggestion-lookup/precache-manifest.ddb542cd65dfd85a4a132576cccaaa35.js",
+  "precache-manifest.5a844865fa24ae225c6f45b141d6c89e.js": "/game-suggestion-lookup/precache-manifest.5a844865fa24ae225c6f45b141d6c89e.js",
   "service-worker.js": "/game-suggestion-lookup/service-worker.js"
 }
