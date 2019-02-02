@@ -10,7 +10,7 @@ dotenv.load();
 app.use(bodyParser.text());
 
 // Serve the static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '/../client/build')));
 
 // An api endpoint that returns a game object from igdb
 app.post('/api/games', (req,res) => {
@@ -56,7 +56,7 @@ app.post('/api/covers', (req, res) => {
 
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+    res.sendFile(path.join(__dirname+'/../client/build/index.html'));
 });
 
 const port = process.env.PORT || 3001;
