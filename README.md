@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Game Suggestion Lookup is a project that gives you suggestions about what games to play based on a game you like. It uses [IGDB's](https://api.igdb.com) API to return a list of ten games that are similar to the searched game. Each game has a title and a quick summary.
 
+Go see it in action here -> https://fast-journey-21477.herokuapp.com/
+
 ## Motivation
 
 I created this project so I could practice integrating Redux into React.
