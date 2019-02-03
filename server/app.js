@@ -3,7 +3,6 @@ const dotenv = require('dotenv');
 const path = require('path');
 const fetch = require('node-fetch');
 const bodyParser = require('body-parser');
-
 const app = express();
 
 dotenv.load();
