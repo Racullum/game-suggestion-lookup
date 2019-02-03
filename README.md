@@ -28,18 +28,26 @@ This project uses ESLINT and Prettier, to lint and style code.
 
 [NODE JS](https://nodejs.org/en/)
 
+[HEROKU](https://www.heroku.com/)
+
 ## Getting it running
 
-Because the IGDB API does not support CORS under their free tier there is no production build at this time. In order to run this on your local machine, get an [API Key](https://api.igdb.com/signup) and then create a local environment file like so ...
+In order to run this on your local machine, get an [API Key](https://api.igdb.com/signup) and then create a local environment file like so ...
 
 ### .env.local
 
 ```
 REACT_APP_API_KEY=INSERT_KEY_HERE
-REACT_APP_API_URL=/
+REACT_APP_API_URL=https://api-v3.igdb.com
 ```
 
-then to run the local server type in
+then to run the local node server, navigate to the project root and type in
+
+```
+npm start
+```
+
+finally navigate to the client folder and run the same command as above
 
 ```
 npm start
@@ -48,7 +56,6 @@ npm start
 ## Improvements to be made
 
 - Make site more friendly to tablet/mobile
-- Create backend API to get around CORS issue for production build
 
 ## License
 
